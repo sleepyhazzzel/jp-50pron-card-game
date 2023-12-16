@@ -1,0 +1,1 @@
+# jp-50pron-card-game
