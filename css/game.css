@@ -1,0 +1,100 @@
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.game {
+    margin-top: -3vh;
+}
+
+.game-10,
+.game-6 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 0.8s linear;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.game-10 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.game-6 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    border: 8px solid #78a0b5;
+    position: relative;
+    margin: 10px;
+    /* 設定子元素在 3D 空間內 */
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+}
+
+.card-front {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center/contain #fffadd;
+    position: absolute;
+    /* 隱藏背面 */
+    backface-visibility: hidden;
+}
+
+.card-back {
+    width: 100%;
+    height: 100%;
+    background: repeat-y center/contain #fff;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card-close {
+    transform: rotateY(180deg);
+}
+
+#switch {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#back,
+#next {
+    width: 150px;
+    height: auto;
+    margin: 0 20px 25px 20px;
+}
+
+#back:hover,
+#next:hover {
+    transform: rotate(-3deg);
+}
+
+.transparent {
+    opacity: 0;
+}

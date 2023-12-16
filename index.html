@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/left-bar.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/game.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="left">
+        <ul></ul>
+        <img src="./images/pyoko_button_home.png" alt="home" title="home" id="home-btn">
+    </div>
+    <div id="main">
+        <div id="table">
+            <div id="background"></div>
+            <div class="half">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="text">平仮名(ひらがな)</div>
+                    </div>
+                </div>
+                <div id="hiragana"></div>
+            </div>
+            <div class="line"></div>
+            <div class="half">
+                <div class="title-box">
+                    <div class="title">片仮名(カタカナ)</div>
+                </div>
+                <div id="katakana"></div>
+            </div>
+        </div>
+        <div id="game-container">
+            <div id="switch">
+                <img src="./images/navigation_back.png" alt="back" title="back" id="back">
+                <img src="./images/navigation_next.png" alt="next" title="next" id="next">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src='./js/jquery-3.7.1.min.js'></script>
+    <!-- jquery-watch -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/watch/2.0.4/watch.min.js'></script>
+
+    <!-- myScript -->
+    <script src="./js/left-bar.js"></script>
+    <script src="./js/table.js"></script>
+    <script src="./js/game.js"></script>
+
+</body>
+
+</html>
